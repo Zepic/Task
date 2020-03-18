@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    
+    <p>Ferdighet 7 - Sette variabel til resultat av et regnestykke. </p>
+    <input id="tallA" type="range" min="1" max="1000" step="1" oninput="calculate()" value="1" />
+    <input id="tallB" type="range" min="1" max="1000" step="1" oninput="calculate()" value="1" />
+    <div id="resultat"></div>
+
+    <p>Oppgave: Lag en slider for å velge bredde fra 1 til 1000 og en slider for å velge høyde fra 1 til 1000. Vis en div med valgt bredde og høyde
+        og legg inn tekst i diven som viser arealet (bredde*høyde) og omkretsen (2*bredde+2*høyde).</p>
+
+        <div id="resultatHtml" style="font-family: monospace">y u no wrk</div>
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var tallAInput = document.getElementById('tallA');
+        var tallBInput = document.getElementById('tallB');
+        var resultatHtmlDiv = document.getElementById('resultatHtml');
+
+        calculate();
+
+        function calculate() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            
+            var arealet = tallA * tallB;
+            var omkretsen = tallA * tallA + tallB * tallB;
+            resultatDiv.innerHTML = + 
+                tallA + '*' + tallB + '=' + arealet + '<br/>' +
+                tallA + '*' + tallB + '=' + omkretsen;
+                resultatHtmlDiv.innerText = resultatDiv.innerHTML;
+        }
+        /*'<div style="' + 'background-color:blue;' + 'width:' + tallA.value + 'px;' + 'height:' + tallb.value +'px;' + '">'*/
+    </script>
+</body>
+</html>
