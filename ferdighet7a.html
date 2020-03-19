@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 7a - Sette variabel til tilfeldig tall</p>
+    <div id="result"></div>
+    <div id="resultHtml"></div>
+    <!--
+    Oppgave: Lag en webside som viser en div med tilfeldig bredde, høyde og border-størrelse. Vis i tillegg som tekst hvilke tilfeldige verdier som brukes. 
+    -->
+
+    <script>
+        var resultDiv = document.getElementById("result");
+        var resultHtmlDiv = document.getElementById("resultHtml");
+        
+        calculate();
+
+        function calculate() {
+            var height1 = 100 + Math.floor(Math.random() * 260);
+            var width1 = 100 + Math.floor(Math.random() * 193);
+            var border1 = 1 + Math.floor(Math.random() * 10);
+                resultDiv.innerHTML = '<div style="' + 'background-color:blue;' +
+                'height:' + height1 + 'px;' +
+                'width:' + width1 +'px;' +
+                'border:solid red ' + border1 + 'px;' +
+                '">' + '</div>';
+                resultHtmlDiv.innerText = resultDiv.innerHTML;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultat"></div>
+    <div id="resultatHtml"></div>
+    <div id="resultatHtml1">:/</div>
+    <script>
+        var resultatDiv = document.getElementById("resultat");
+        var resultatHtmlDiv = document.getElementById("resultatHtml");
+        var resultatHtmlDiv1 = document.getElementById("resultatHtml1");
+        tilfeldig();
+        
+        {
+            var y = Math.random();
+            console.log(y);
+        }
+            epr();
+
+        function tilfeldig(){
+            let x = Math.random();
+            if(x < 0.3){
+                resultatDiv.innerHTML = '<div id="resultat">ja</div>';
+            }
+            else if(x > 0.5){
+                resultatDiv.innerHTML = '<div id="resultat">nei</div>';
+            }
+            else if(x == 0.4){
+                resultatDiv.innerHTML = '<div id="resultat">WOW</div>';
+            }
+            else {
+                resultatDiv.innerHTML = '<div id="resultat">kanskje</div>';
+            }
+            resultatHtmlDiv.innerText = x;
+
+        }
+        function epr(){
+            resultatHtmlDiv1.innerText = y;
+            console.log(y);
+        }
+
+
+
+    </script>
+</body>
+</html>
