@@ -1,0 +1,33 @@
+﻿﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 9a - Valgsetninger Sammenligne to tall: ==, !=, &lt;, &lt;=, >, >=</p>
+    <input id="tallA" type="text" min="1" max="1000" step="1" oninput="calculate()" value="6" />
+    <input id="tallB" type="text" min="1" max="1000" step="1" oninput="calculate()" value="2" />
+    <div id="resultat"></div>
+    <div id="høyde">A</div>
+    <div id="bredde">B</div>
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var tallAInput = document.getElementById('tallA');
+        var tallBInput = document.getElementById('tallB');
+/* Oppgave: Lag to div-er med teksten “A” og teksten “B”, og to slidere som lar deg bestemme bredde og høyde på valgt div på samme måte som i forrige oppgave.
+ Vis til enhver tid arealet til begge div-ene (arealet er bredden ganger høyden) og en tekst som sier hvilken div som er størst.*/
+        calculate();
+
+        function calculate() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            var arealet = tallA * tallB;
+            var omkretsen = tallA * tallA + tallB * tallB;
+            resultatDiv.innerHTML = '';
+            
+        }
+    </script>
+</body>
+</html>

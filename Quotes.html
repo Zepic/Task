@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(Sun.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center{
+            text-align: center;
+            color: rgb(196, 164, 164);
+        }
+        h3{
+            font-style: oblique;
+        }
+        p{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="center" id="main"></div>
+    <script>
+        var x = document.getElementById("main")
+        myFunction()
+
+function myFunction() {
+  var d = new Date();
+  var n = d.getDay(); 
+  console.log(n);
+
+    if(n == 1){
+        x.innerHTML = `
+                        <h1>Måne dag</h1>
+                        <p>Mandag<br>
+                        <h3>The moon is a loyal companion.
+                        It never leaves. It’s always there, watching, steadfast, knowing us in our light and dark moments, changing forever just as we do. <br>
+                        Every day it’s a different version of itself. Sometimes weak and wan, sometimes strong and full of light. <br> The moon understands what it means to be human.
+                        Uncertain. Alone. Cratered by imperfections.
+        `
+        }
+    if (n == 2){
+        x.innerHTML = `
+                        <h1>Týrs dag</h1>
+                        <p>Tirsdag<br>
+                        <h3>The soul would have no rainbow had the eyes no tears
+                        `
+        }
+        //              <h3>Great leaders are always inviting others to join them in a brighter tomorrow
+        //              <h3>The soul would have no rainbow had the eyes no tears
+    if(n == 3){
+        x.innerHTML =   `
+                        <h1>Odins dag</h1>
+                        <p> Onsdag<br>
+                        <h3>It is a pity that there are no big creatures to prey on humanity.
+                        If there were enough dragons and rocs, perhaps mankind would turn its might against them.
+                        <br>Unfortunately man is preyed upon by microbes, which are too small to be appreciated
+         `
+        }
+    if(n == 4){
+        x.innerHTML = `
+                        <h1>Tors dag</h1>
+                        <p>Torsdag<br>
+                        <h3>Greatness is being great when greatness is the minimal amount required for success
+        `
+        }
+    if(n == 5){
+        x.innerHTML = `
+                        <h1>friggs dag
+                        <p>Fredag<br>
+                        <h3>If you know a friend you can fully trust. Go often to his house grass and brambles grow quickly upon untrodden track.
+        `
+        }
+    if(n == 6){
+        x.innerHTML = `
+                        <h1>Laugardagr</h1>
+                        <p>Lørdag<br>
+                        <h3>Anyone who has never made a mistake has never tried anything new
+        `
+        }
+    if(n == 7){
+        x.innerHTML = `
+                        <h1>Sol day</h1>
+                        <p>Søndag<br>
+                        <h3>A sunday well spent brings a week of content
+        `
+        }
+}
+    </script>
+</body>
+</html>
